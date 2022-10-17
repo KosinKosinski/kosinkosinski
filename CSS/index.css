@@ -1,12 +1,10 @@
 body
 {
- margin:0 auto;
- margin-left: auto;
- margin-right: auto;
- margin-top: 100px;
  background-color: black;
  color: aliceblue;
  text-align: center; 
+ min-height: 100%;
+ margin: auto;
 }
 
 .button
@@ -21,18 +19,70 @@ body
   width: 200px;
   margin-top: 25px;
   border-radius: 10px;
+  
 }
 a 
 {
  color: azure;
 }
-iframe
-{
-  
-  margin-right: 100px;
-  float: right;
-}
+
 h1
 {
   color: azure;
 }
+
+.header {
+    grid-area: header;
+    border: 20px black;
+    text-align: center;
+}
+.content {
+    background-color: transparent;
+    grid-area: content;
+    align-self: center;
+    justify-self: center;
+}
+.menu {
+    background-color: transparent;
+    grid-area: menu;  
+}
+.footer {
+    background-color: #000000;
+    grid-area: footer;
+    width: 99%;
+    text-align: center;
+    color: azure;
+    position: absolute;
+    bottom: 0;
+}
+
+.grid-wrapper-main{
+    display: grid;
+    grid-template-columns: 2.5fr 2.5fr 0.1fr;
+    row-gap: 40px;
+    column-gap: 10px;
+    grid-template-areas: 
+    "header header header"
+    "content content menu"
+    "footer footer footer";
+}
+
+.twitch-stream-script {
+  position: relative;
+  top: 100vh;
+  max-width: 65%;
+  max-height: 90vh;
+}
+
+.twitch-stream {
+  position: relative;
+  float: right;
+  right: 0.5vw;
+  top: 1vh;
+}
+  .twitch-stream-script {
+    position: relative;
+    top: 100vh;
+    max-width: 65%;
+    max-height: 90vh;
+  }
